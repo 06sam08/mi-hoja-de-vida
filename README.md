@@ -1,6 +1,50 @@
 public class HojaDeVida {
-//atributos 
-private String nombreCompleto;
-private String correoElectronico
-private String []FormacionAcademica
-private String []Habilidades
+
+    // Atributos
+    private String nombreCompleto;
+    private String correoElectronico;
+    private String[] formacionAcademica;
+    private String[] habilidades;
+
+    // Constructor con tus datos
+    public HojaDeVida() {
+        this.nombreCompleto = "Samir Arrieta Silva";
+        this.correoElectronico = "samir1230zx@gmail.com";
+
+        this.formacionAcademica = new String[] {
+            "Bachillerato"
+        };
+
+        this.habilidades = new String[] {
+            "Excelente en el manejo de matemáticas",
+            "Bueno con la lectura"
+        };
+    }
+
+    // Método para mostrar la hoja de vida
+    public void mostrarHojaDeVida() {
+        System.out.println("=====================================");
+        System.out.println("          MI HOJA DE VIDA");
+        System.out.println("=====================================");
+        System.out.println("Nombre completo: " + nombreCompleto);
+        System.out.println("Correo electrónico: " + correoElectronico);
+
+        System.out.println("\nFormación Académica:");
+        for (String formacion : formacionAcademica) {
+            System.out.println("- " + formacion);
+        }
+
+        System.out.println("\nHabilidades:");
+        for (String habilidad : habilidades) {
+            System.out.println("- " + habilidad);
+        }
+
+        System.out.println("=====================================");
+    }
+
+    // Método principal para ejecutar el programa
+    public static void main(String[] args) {
+        HojaDeVida miHoja = new HojaDeVida();
+        miHoja.mostrarHojaDeVida();
+    }
+}
